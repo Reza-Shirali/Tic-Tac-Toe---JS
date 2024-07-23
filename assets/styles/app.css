@@ -1,0 +1,91 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+  font-size: 1.6rem;
+}
+:root {
+  --orange: #f2c14e;
+  --winning-blocks: #2d414b;
+  --container: #37505c;
+}
+
+body {
+  color: var(--orange);
+  font-family: "Finger Paint", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+h1 {
+  font-size: 5.4rem;
+  text-transform: uppercase;
+}
+.container {
+  padding: 4rem;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--container);
+}
+
+.game__board {
+  width: 45rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+}
+
+.box {
+  height: 15rem;
+  width: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--orange);
+  font-size: 12rem;
+  border-right: 0.2rem solid;
+  border-bottom: 0.2rem solid;
+}
+.box:nth-child(3n) {
+  border-right: none;
+}
+
+.box:nth-child(6) ~ .box {
+  border-bottom: none;
+}
+
+.restart__btn {
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  background-color: var(--orange);
+  color: #333;
+  border-color: var(--orange);
+  font-size: 1.8rem;
+  transition: 200ms transform;
+  -webkit-transition: 200ms transform;
+  -moz-transition: 200ms transform;
+  -ms-transition: 200ms transform;
+  -o-transition: 200ms transform;
+  font-weight: 600;
+  margin-top: 2rem;
+}
+.restart__btn:hover {
+  cursor: pointer;
+  transform: translateY(-0.2rem);
+  -webkit-transform: translateY(-0.2rem);
+  -moz-transform: translateY(-0.2rem);
+  -ms-transform: translateY(-0.2rem);
+  -o-transform: translateY(-0.2rem);
+}
